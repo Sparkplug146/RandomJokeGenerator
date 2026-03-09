@@ -1,7 +1,7 @@
-const button = document.getElementById("activityBtn");
-const activity = document.getElementById("activityName");
-const type = document.getElementById("activityType");
-const participants = document.getElementById("activityParticipants");
+const button = document.getElementById("jokeBtn");
+const category = document.getElementById("jokeCategory");
+const setup = document.getElementById("jokeSetup");
+const delivery = document.getElementById("jokeDelivery");
 
 button.addEventListener("click", function(){
     console.log("Generating Activity...")
