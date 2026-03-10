@@ -7,6 +7,11 @@ const delivery = document.getElementById("jokeDelivery");
 //Click event, so when the button is clicked, the function inside the code runs
 button.addEventListener("click", function(){
 
+  //Shows loading message
+  setup.textContent = "Loading joke..."
+  delivery.textContent = "";
+  category.textContent = "";
+
     //fetch() sends a request to an API to get data from the internet
     //This API comes from :contentReference[oaicite:0]{index=0} and returns a random joke
     fetch("https://v2.jokeapi.dev/joke/Any?safe-mode")
