@@ -3,6 +3,8 @@ const button = document.getElementById("jokeBtn");
 const category = document.getElementById("jokeCategory");
 const setup = document.getElementById("jokeSetup");
 const delivery = document.getElementById("jokeDelivery");
+const saveBtn = document.getElementById("saveBtn");
+const savedJokesList = document.getElementById("savedJokes");
 
 
 
