@@ -85,6 +85,12 @@ button.addEventListener("click", function(){
 saveBtn.addEventListener("click", function(){
 
   let jokeText = setup.textContent + " " + delivery.textContent;
+  
+  //Prevents Saving an Already Saved Joke
+  if(savedJokes.includes(jokeText)){
+    alert("Joke already saved!");
+    return;
+  }
 
   let newJoke = document.createElement("li");
   newJoke.textContent = jokeText;
