@@ -81,16 +81,37 @@ button.addEventListener("click", function(){
   });
 });
 
+//Saves Joke
 saveBtn.addEventListener("click", function(){
+
   let jokeText = setup.textContent + " " + delivery.textContent;
 
   let newJoke = document.createElement("li");
-
   newJoke.textContent = jokeText;
-  
+
+  let deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "❌";
+
+  newJoke.appendChild(deleteBtn);
+
   savedJokesList.appendChild(newJoke);
 
   savedJokes.push(jokeText);
 
   localStorage.setItem("jokes", JSON.stringify(savedJokes));
+
+  // Deletes Joke
+  deleteBtn.addEventListener("click", function(){
+
+    newJoke.remove();
+
+    savedJokes = savedJokes.filter(function(joke){
+      return joke !== jokeText;
+    });
+
+    localStorage.setItem("jokes", JSON.stringify(savedJokes));
+
+  });
+
 });
+
